@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/51d5218d26.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- ---------- HEADER --------------- -->
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse left-navbar pl-3">
+                <ul class="navbar-nav">
+                    <liv class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </liv>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                    </li>
+                </ul>
+                <form method="get" action="#" class="form-inline mr-auto">
+                    <div class="input-group input-group-sm">
+                        <input class="form-control rounded-0 border-0 bg-light" type="text" placeholder="">
+                        <div class="input-group-append">
+                            <button class="btn rounded-0 btn-light" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="collapse navbar-collapse right-navbar pr-3">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            <i class="far fa-comments"></i> <span class="sr-only"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-item">Item</div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                            <i class="far fa-bell"></i>
+                        </a>
+
+                    </li>
+
+                    <li class="account nav-item account d-flex align-items-center">
+                        <img alt="avatar" class="rounded-circle" style="height: 20px;"
+                            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/face-wash-2-1561136582.jpg">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-decoration-none">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-item">
+                                <a href="#" class="text-decoration-none"> My account</a>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#" class="text-decoration-none">
+                                    Sign out
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- --------------- LEFT BAR ----------------- -->
+        <section class="leftbar-wrapper bg-dark h-100 text-light px-2">
+            <div class="leftbar">
+                <div class="logo mb-5">
+                    <img class="rounded-circle" style="height: 30px;" alt="logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png">
+                    <h5 class="ml-2 mb-0">Admin template</h5>
+                </div>
+                <div class="leftbar-menu text-light">
+
+                    <ul class="leftbar-content fc-1 list-unstyled">
+                        <li class="leftbar-item">
+                            <a href="#menu-1" class="leftbar-link collapse-toggle" data-toggle="collapse">
+                                <div>
+                                    <i class="fas fa-home mr-2 fc-1"></i>
+                                    <span class="leftbar-item-title">
+                                        Dashboard
+                                    </span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+                            </a>
+                            <ul id="menu-1" class="collapse list-unstyled">
+                                <li class="leftbar-sub-item">
+                                    <a href="#">
+                                        <i class="far fa-circle mr-2"></i>
+                                        Item 1
+                                    </a>
+                                </li>
+                                <li class="leftbar-sub-item">
+                                    <a href="#">
+                                        <i class="far fa-circle mr-2"></i>
+                                        Item 1
+                                    </a>
+                                </li>
+                                <li class="leftbar-sub-item">
+                                    <a href="#">
+                                        <i class="far fa-circle mr-2"></i>
+                                        Item 1
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="leftbar-item">
+                            <a href="" class="leftbar-link">
+                                <div>
+                                    <i class="fas fa-tools mr-2"></i>
+                                    <span class="leftbar-item-title">
+                                        Tool 1
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="leftbar-item active">
+                            <a href="#menu-2" class="leftbar-link collapse-toggle" data-toggle="collapse">
+                                <div>
+                                    <i class="fas fa-pen-square mr-2"></i>
+                                    <span class="leftbar-item-title">
+                                        Post
+                                    </span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+                            </a>
+
+                            <ul id="menu-2" class="collapse list-unstyled">
+                                <li class="leftbar-sub-item">
+                                    <a href="#">
+                                        <i class="far fa-circle mr-2"></i>
+                                        New post
+                                    </a>
+                                </li>
+                                <li class="leftbar-sub-item">
+                                    <a href="#">
+                                        <i class="far fa-circle mr-2"></i>
+                                        Manage post
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="leftbar-item">
+                            <a href="#" class="leftbar-link">
+                                <div>
+                                    <i class="fas fa-tools mr-2"></i>
+                                    <span class="leftbar-item-title">
+                                        Tool 3
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+        </section>
+        <section class="main-wrapper bg-light">
+            <section class="content">
+                Content
+            </section>
+        </section>
+        <footer>
+            Footer
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
