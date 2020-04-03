@@ -10,7 +10,9 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/51d5218d26.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/18.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.tiny.cloud/1/hrzsxlxliacgdlj9c44dvc0edehdq8eoi0if6e143emfrc6m/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
 </head>
 
 <body>
@@ -65,7 +67,7 @@
 
                     <li class="account nav-item account d-flex align-items-center">
                         <img alt="avatar" class="rounded-circle" style="height: 20px;"
-                            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/face-wash-2-1561136582.jpg">
+                            src="https://i.pinimg.com/originals/c3/45/05/c34505eb63edc65300a690f1ad903799.jpg">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle text-decoration-none">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -183,7 +185,7 @@
                 Add new
             </h2>
             <section class="content px-3 row">
-                <div class="col">
+                <div class="col-12">
                     <form method="post" action="" id="form-add-new-post">
                         <div class="row">
                             <div class="form-group col-lg-6">
@@ -199,98 +201,190 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="form-group col-lg-6">
                                 <label class="fc-2 font-weight-bold" for="f-author">Author / Cre</label>
-                                <input id="f-author" type="text" class="form-control" name="author" required value="Linh Hà">
+                                <input id="f-author" type="text" class="form-control" name="author" required
+                                    value="Linh Hà">
                             </div>
                             <div class="form-group col-lg-6">
-                                <label class="fc-2 font-weight-bold" for="f-tag">
+                                <label class="fc-2 font-weight-bold" for="f-tags">
                                     Tags
-                                    <span class="font-weight-normal"> (Use space character ' ' to seperate among tags)</span>
+                                    <span class="font-weight-normal"> (Use space character ' ' to seperate among
+                                        tags)</span>
                                 </label>
-                                <input id="f-tag" type="text" class="form-control" name="tag" required>
+                                <input id="f-tags" type="text" class="form-control" name="tags" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="fc-2 font-weight-bold" for="f-description">Description</label>
-                            <textarea id="f-description" type="text" class="form-control" name="description" required rows="4" maxlength="250"></textarea>
+                            <textarea id="f-description" type="text" class="form-control" name="description" required
+                                rows="4" maxlength="250"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="fc-2 font-weight-bold" for="f-cover">Cover</label>
                             <div class="form-check">
                                 <label for="cover-url-radio" class="form-check-label d-block">
-                                    <input id="cover-url-radio" class="form-check-input" type="radio" name="f-cover" checked>
+                                    <input id="cover-url-radio" class="form-check-input" type="radio" name="f-cover">
                                     URL
                                 </label>
-                                <input type="url" name="cover" id="cover-url-text" class="collapse show">
+                                <input type="url" name="cover" id="cover-url-text" class="collapse">
                             </div>
                             <div class="form-check">
                                 <label for="cover-file-radio" class="form-check-label">
-                                    <input id="cover-file-radio" class="form-check-input" type="radio" name="f-cover" value="true">
+                                    <input id="cover-file-radio" class="form-check-input" type="radio" name="f-cover"
+                                        value="true">
                                     Upload file
                                 </label>
-                                <input id="cover-file-choose" class="form-control-file collapse show" type="file" name="cover">
+                                <input id="cover-file-choose" class="form-control-file collapse" type="file"
+                                    name="cover">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="fc-2 font-weight-bold" for="f-content">Content</label>
-                            <textarea id="f-content" class="form-control" name="" rows="10">
-                                <p>This is some sample content.</p>
-                            </textarea>
+                            <input id="f-content" class="form-control" name="f-content" style="height: 700px;">
+
+                            </input>
                         </div>
-                        
+
                         <button id="btn1" class="btn btn-primary my-4" type="button">Save</button>
                         <button id="btn1" class="btn btn-primary my-4" type="button">Publish</button>
-                        <button id="btn1" class="btn btn-primary my-4" type="button">Thumbnail Preivew</button>
-                        <button id="btn1" class="btn btn-primary my-4" type="button">Post Preivew</button>
-                        
+                        <button id="thumbnail-preview-button" class="btn btn-primary my-4" type="button">Thumbnail
+                            Preivew</button>
+                        <button id="post-detail-preview-button" class="btn btn-primary my-4" type="button">Post
+                            Preivew</button>
+
                     </form>
                 </div>
-                <img src="#" id="preview" alt="">
-                <div class="col-lg-7">
-                    <div class="post-thumbnail">
-                        <span class="fc-2 font-weight-bold">
-                            Post thumbnail
-                        </span>
-                        <div class="post-thumbnail-content pt-2">
-                            <div class="post-overview">
-                                <img src="cover.jpg" alt="thumbnail-blog-detail" class="post-img-thumbnail" />
-                                <div class="post-text-detail">
-                                    <div class="date-post">
-                                        <div class="text-center">
-                                            <p class="fs-23 font-weight-bold">13</p>
-                                            <p class="fs-20 mb-0">Feb</p>
+                <!-- THUMBNAIL PREVIEW MODAL -->
+                <div id="thumbnail-preview-modal" class="modal fade" tabindex="-1" role="dialog"
+                    aria-labelledby="my-modal-title" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="my-modal-title">
+                                    <span class="fc-2 font-weight-bold">
+                                        Post thumbnail
+                                    </span>
+                                </h5>
+                                <button class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="post-thumbnail">
+                                    <div class="post-thumbnail-content pt-2">
+                                        <div class="post-overview">
+                                            <img src="cover.jpg" alt="thumbnail-blog-detail"
+                                                class="post-img-thumbnail" />
+                                            <div class="post-text-detail">
+                                                <div class="date-post-thumbnail">
+                                                    <div class="text-center">
+                                                        <p class="fs-23 font-weight-bold date">13</p>
+                                                        <p class="fs-20 mb-0 month">Feb</p>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="title-post-thumbnail">This is the title of post</a>
+                                                <p class="description-post-thumbnail fs-19 m-tb-20 lh-15 fc-2">
+                                                    
+                                                </p>
+                                                <div class="category-post-thumbnail fc-2 m-b-10">
+                                                    <i class="fas fa-book-open"></i>
+                                                    &nbsp;
+                                                    <span>Cuộc sống</span>
+                                                    &nbsp;
+                                                </div>
+                                                <div class="tags-post-thumbnail">
+                                                    <span>Tags: </span>
+
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <a href="#" class="title-post-thumbnail">This is the title of post</a>
-                                    <p class="description-post-thumbnail fs-19 m-tb-20 lh-15 fc-2">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam magnam ad, animi exercitationem, nam
-                                        quis hic,
-                                        alias commodi provident aut nihil minima. Alias tenetur quod perspiciatis sapiente earum ratione
-                                        facilis.
-                                    </p>
-                                    <div class="topic-and-comment fc-2 m-b-10">
-                                        <i class="fas fa-book-open"></i>
-                                        &nbsp;
-                                        <span>Cuộc sống</span>
-                                        &nbsp;
-                                       
-                        
-                                    </div>
-                                    <div class="tags">
-                                        <span>Tags: </span>
-                                        <a href="#">#tag1</a>
-                                        <a href="#">#tag2</a>
-                                        <a href="#">#tag3</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- POST DETAIL PREVIEW MODAL -->
+                <div id="post-detail-preview-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="left-slide-bar-blog-detail-wrapper">
+                                    <div class="post-detail">
+                                        <img src="cover.jpg" alt="" class="post-cover-image" />
+                                        <div class="">
+                                            <h1 class="font-weight-bold fs-25 post-detail-title">THIS IS TITLE
+                                            </h1>
+                                            <div class="date-and-category">
+                                                <span class="post-detail-date">22/12/2019</span>
+                                                <span>&nbsp; | &nbsp;</span>
+                                                <span class="post-detail-category">Cuoc song</span>
+                                            </div>
+                                            <div class="post-detail-author fs-14">
+                                                <i class="fas fa-book-reader"></i>
+                                                <span class="">Linh Ha</span>
+                                            </div>
+                                            <div class="post-detail-content">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                                pariatur ut iure
+                                                molestias sed id accusantium! Maxime libero, l
+                                                abore saepe placeat cupiditate architecto sapiente dolores, tempore
+                                                temporibus rem nihil delectus.
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="rate-wrapper">
+                                        <div class="your-rate-wrapper">
+                                            <span>Your rate: </span>
+                                            <i class="fas fa-star" id="level1"> </i>
+
+                                            <i class="fas fa-star" id="level2"> </i>
+
+                                            <i class="fas fa-star rated" id="level3"> </i>
+
+                                            <i class="fas fa-star" id="level4"> </i>
+
+                                            <i class="fas fa-star" id="level5"> </i>
+                                        </div>
+                                        <div class="rate">
+                                            <span>Rate: 4.7 </span>
+                                            <span>(3 votes)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="related-post-wrapper">
+                                        <div>
+                                            <h3>Related posts</h3>
+                                            <div class="row">
+                                                <div class="col-md-4 related-post-item">
+                                                    <img alt="this is a related post" class="related-thumbnail"
+                                                        src="cover.jpg"></img>
+                                                    <a href="#">This is the first related post</a>
+                                                </div>
+                                                <div class="col-md-4 related-post-item">
+                                                    <img alt="this is a related post" class="related-thumbnail"
+                                                        src="cover.jpg"></img>
+                                                    <a href="#">This is the second related post</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </section>
         </section>
         <footer>
@@ -310,45 +404,316 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-        <script>
-            let editorGlobal;
-            ClassicEditor
-                .create(document.querySelector('#f-content'))
-                .then(editor => {
-                    editorGlobal = editor;
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+    <script>
+        tinymce.init({
+            selector: '#f-content',
+            plugins: 'image code a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+            toolbar: 'undo redo | link image | code a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+            toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            //enable title field in the Image dialog
+            image_title: true,
+            // enable automatic uploads of images represented by blob or data URIs
+            automatic_uploads: true,
+            // add custom filepicker only to Image dialog
+            file_picker_types: 'image',
+            file_picker_callback: function (cb, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
 
-            $(document).ready(function () {
-                
-                $('#btn1').on('click', function () {
-                
-                    alert($('#f-content').val());
-                })
-            })
-        </script>
-        <script>
-            function readURL(input) {
+                input.onchange = function () {
+                    var file = this.files[0];
+                    var reader = new FileReader();
+
+                    reader.onload = function () {
+                        var id = 'blobid' + (new Date()).getTime();
+                        var blobCache = tinymce.activeEditor.editorUpload.blobCache;
+                        var base64 = reader.result.split(',')[1];
+                        var blobInfo = blobCache.create(id, file, base64);
+                        blobCache.add(blobInfo);
+
+                        // call the callback and populate the Title field with the file name
+                        cb(blobInfo.blobUri(), { title: file.name });
+                    };
+                    reader.readAsDataURL(file);
+                };
+
+                input.click();
+            }
+        });
+    </script>
+
+
+    <!-- POST THUMBNAIL -->
+    <script>
+        const btnThumbnailPreview = document.querySelector('#thumbnail-preview-button');
+        const modalThumbanilPreview = $('#thumbnail-preview-modal');
+        btnThumbnailPreview.addEventListener('click', function () {
+            //get value
+            const title = document.getElementById('f-title').value,
+                description = document.getElementById('f-description').value,
+                category = document.getElementById('f-category').value,
+                tags = document.getElementById('f-tags').value.split(' '),
+                date = new Date();
+            //set value
+            document.querySelector('.title-post-thumbnail').innerText = title;
+            document.querySelector('.description-post-thumbnail').innerText = description;
+            document.querySelector('.category-post-thumbnail span').innerText = category;
+            document.querySelector('.date').innerText = date.getDate();
+            document.querySelector('.month').innerText = convertMonthToString(date.getMonth());
+
+            const tagsPreview = document.querySelector('.tags-post-thumbnail');
+            let tagChildren = document.querySelectorAll('.tags-post-thumbnail a');
+            //remove all tags if exits
+            tagChildren.forEach(tagChild => {
+                tagChild.remove();
+            });
+            tags.forEach(tag => {
+                if (tag === '')
+                    return;
+                const tagChild = document.createElement('a');
+                tagChild.innerHTML = `<a href='#'>#${tag} </a>`;
+                tagsPreview.appendChild(tagChild);
+            });
+
+            const fileInput = document.getElementById('cover-file-choose');
+            readURL(fileInput);
+
+            //show modal
+            modalThumbanilPreview.modal();
+        })
+
+        function convertMonthToString(month) {
+            switch (month) {
+                case 0:
+                    return 'Jan';
+                case 1:
+                    return 'Feb';
+                case 2:
+                    return 'Mar';
+                case 3:
+                    return 'Apr';
+                case 4:
+                    return 'May';
+                case 5:
+                    return 'Jun';
+                case 6:
+                    return 'Jul';
+                case 7:
+                    return 'Aug';
+                case 8:
+                    return 'Sep';
+                case 9:
+                    return 'Oct';
+                case 10:
+                    return 'Nov';
+                case 11:
+                    return 'Dec';
+                default:
+                    return '';
+            }
+        }
+
+
+        function readURL(input) {
+            const btnURL = document.querySelector('#cover-url-radio');
+            if (btnURL.checked) {
+
+                const imgPostThumbnailPreview = document.querySelector('.post-img-thumbnail');
+                const imgPostDetailPreview = document.querySelector('.post-cover-image');
+                const inputURL = document.querySelector('#cover-url-text').value;
+
+                imgPostDetailPreview.src = inputURL;
+                imgPostThumbnailPreview.src = inputURL;
+                return;
+            }
+
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    const imgPreview = document.getElementById('preview');
-                    
-                    imgPreview.src = e.target.result;
+                    const imgPostThumbnailPreview = document.querySelector('.post-img-thumbnail');
+                    const imgPostDetailPreview = document.querySelector('.post-cover-image');
+                    imgPostDetailPreview.src = e.target.result;
+                    imgPostThumbnailPreview.src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            }
+        }
+    </script>
+
+    <!-- rate -->
+    <script>
+        function mouseOver(id) {
+            removeRate();
+            let level = document.getElementById('level1');
+            if (!level)
+                return;
+            while (level.id !== id) {
+                //if (level)
+                level.classList.add('hover-rate');
+                level = level.nextElementSibling;
+            }
+            level.classList.add('hover-rate');
+            if (level.id === 'level5')
+                return;
+
+            level = level.nextElementSibling;
+            while (level.id !== 'level5') {
+                level.classList.remove('hover-rate');
+                level = level.nextElementSibling;
+            }
+            level.classList.remove('hover-rate');
+        }
+
+        function mouseOut() {
+
+            let level = document.getElementById('level1');
+
+            while (level.id !== 'level5') {
+                level.classList.remove('hover-rate');
+                level = level.nextElementSibling;
+            }
+            level.classList.remove('hover-rate');
+            addRate();
+        }
+        function addRate() {
+            let vote = 3;
+            if (vote) {
+                let level = document.getElementById('level1');
+                if (!level)
+                    return;
+                while (level.id !== `level${vote}`) {
+                    //if (level)
+                    level.classList.add('rated');
+                    level = level.nextElementSibling;
+                }
+                level.classList.add('rated');
+                if (level.id === 'level5')
+                    return;
+
+                level = level.nextElementSibling;
+                while (level.id !== 'level5') {
+                    level.classList.remove('rared');
+                    level = level.nextElementSibling;
+                }
+                level.classList.remove('rated');
+            }
+        }
+
+
+        function removeRate(){
+            let level = document.getElementById('level1');
+            while (level.id !== 'level5') {
+                level.classList.remove('rated');
+                level = level.nextElementSibling;
+            }
+            level.classList.remove('rated');
+        }
+
+
+    </script>
+
+    <!-- POST DETAIL -->
+    <script>
+
+        const convertDate = (dateObject) => {
+            const date = dateObject.getDate();
+            const month = dateObject.getMonth() + 1;
+            const year = dateObject.getFullYear(dateObject);
+            return `${date}/${month}/${year}`;
+        }
+
+        const btnPostDetaillPreview = document.querySelector('#post-detail-preview-button');
+        const modalPostDetaillPreview = $('#post-detail-preview-modal');
+        btnPostDetaillPreview.addEventListener('click', function () {
+            //get value
+            const title = document.getElementById('f-title').value,
+                author = document.getElementById('f-author').value,
+                category = document.getElementById('f-category').value,
+                content = tinyMCE.activeEditor.getContent(),
+                date = new Date();
+            
+            //set value
+            document.querySelector('.post-detail-title').innerText = title;
+            document.querySelector('.post-detail-author span').innerText = author;
+            document.querySelector('.post-detail-category').innerText = category;
+            document.querySelector('.post-detail-date').innerText = convertDate(date);
+            document.querySelector('.post-detail-content').innerHTML = content;
+
+            //read image
+            const fileInput = document.getElementById('cover-file-choose');
+            readURL(fileInput);
+
+            //add rate
+            const rateItems = document.querySelectorAll('.your-rate-wrapper i');
+            addRate();
+            rateItems.forEach(rateItem => {
+                rateItem.addEventListener('mouseover', () => mouseOver(rateItem.id));
+                rateItem.addEventListener('mouseout', () => mouseOut());
+            });
+
+            //show modal
+            modalPostDetaillPreview.modal();
+
+            function readURL(input) {
+                const btnURL = document.querySelector('#cover-url-radio');
+                if (btnURL.checked) {
+
+
+                    const imgPostDetailPreview = document.querySelector('.post-cover-image');
+                    const inputURL = document.querySelector('#cover-url-text').value;
+
+                    imgPostDetailPreview.src = inputURL;
+
+                    return;
                 }
 
-                reader.readAsDataURL(input.files[0]); // convert to base64 string
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+
+                        const imgPostDetailPreview = document.querySelector('.post-cover-image');
+                        imgPostDetailPreview.src = e.target.result;
+
+                    }
+                    reader.readAsDataURL(input.files[0]); // convert to base64 string
                 }
             }
-            
-            const fileInput = document.getElementById('cover-file-choose');
-            fileInput.addEventListener('change', function() {
-                readURL(this);
+        })
+    </script>
+
+    <!-- IMAGE COVER -->
+    <script>
+        window.onload = function () {
+            const radioInputs = document.querySelectorAll('input[name="f-cover"]');
+
+            radioInputs[0].addEventListener('click', function () {
+
+                if (this.checked) {
+                    document.querySelector('#cover-url-text').classList.add('show');
+                    document.querySelector('#cover-file-choose').classList.remove('show');
+                } else {
+                    document.querySelector('#cover-url-text').classList.remove('show');
+                    document.querySelector('#cover-file-choose').classList.add('show');
+                }
             })
-        </script>
-           
+            radioInputs[1].addEventListener('click', function () {
+
+                if (this.checked) {
+                    document.querySelector('#cover-url-text').classList.remove('show');
+                    document.querySelector('#cover-file-choose').classList.add('show');
+                } else {
+                    document.querySelector('#cover-url-text').classList.add('show');
+                    document.querySelector('#cover-file-choose').classList.remove('show');
+                }
+            })
+
+
+        }
+    </script>
 </body>
 
-</html>
+</html
