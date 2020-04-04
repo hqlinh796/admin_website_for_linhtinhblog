@@ -253,6 +253,16 @@ nav {
     }
 
 
+/*  MANAGE POST */
+
+.nav-link.active {
+    background-color: inherit !important;
+    color: rgb(48, 48, 48) !important;
+    border-radius: 0;
+    border-bottom: 1px solid #6b6b6b;
+}
+
+
 /* UTIL */
 .fc-1 {
     color: rgb(184, 184, 184) !important;
@@ -265,3 +275,7 @@ nav {
 }
 a:hover {text-decoration: none;}
 body {overflow-x: hidden}
+
+
+/* MODAL */
+

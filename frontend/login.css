@@ -1,0 +1,27 @@
+.wrapper {
+    background-image: url('https://stewfano.org/wp-content/uploads/2018/12/navy-blue-gradient-background.png');
+    background-size: cover;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.login-wrapper {
+    padding-top: 100px;
+}
+
+.login-wrapper input {
+    border-radius: 22px;
+    height: 44px;
+    margin-bottom: 20px;
+}
+.login-wrapper button {
+    width: 100%;
+    border-radius: 22px;
+    height: 44px;
+    background-color: #000;
+    border: 0;
+}
