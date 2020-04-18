@@ -1,0 +1,77 @@
+.wrapper{
+    width: 100%;
+    box-shadow: 10px 10px 10px #ececec;
+}
+.wrapper > img{
+        width: 100%;
+        object-fit: cover;
+}
+.main{
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        box-sizing: border-box;
+        padding-top: 70px;
+        padding-bottom: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: visible;
+}
+.dateAndMonth{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background-color: #28AE60;
+        top: -70px;
+        left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 25px;
+        overflow: visible;
+}
+.dateAndMonth div {
+        line-height: 13px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+}
+.date {
+    font-size: 23px;
+    font-weight: bold;
+}
+.month {
+    font-size: 20px;
+}
+.title {
+        color: #000;
+        font-size: 23px;
+        font-weight: bold;
+        transition: 0.2s ease-in-out;
+}
+.title:hover {
+        color: #28AE60; 
+}
+.description {
+    color: #656565;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+.category {
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 15px;
+}
+.tagWrapper a{
+    color: #28AE60;
+    
+}
+.tagWrapper a:hover{
+        color: #19964d;
+}

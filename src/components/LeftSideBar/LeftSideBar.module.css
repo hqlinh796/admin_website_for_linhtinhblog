@@ -1,0 +1,58 @@
+.leftbarWrapper{
+    width: 280px;
+    float: left;
+    height: 100%;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+}
+
+.leftBar .logo {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px rgba(255, 255, 240, 0.3);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a.leftBarLink {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: ease-in-out 0.2s;
+    color: rgb(184, 184, 184);
+    cursor: pointer;
+}
+a.leftBarLink:hover,
+.leftBarSubItem a:hover {
+    text-decoration: none;
+    background-color: rgb(69, 75, 82);
+    color: #fff !important;
+}
+
+.active > a,
+.active > a:hover {
+    background-color: rgb(20, 84, 156);
+    border-radius: 2%;
+    color: #fff;
+}
+
+
+    /* Left bar sub item */
+
+.leftBarSubItem a{
+    color: rgb(184, 184, 184);
+    padding-left: 30px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.2s ease-in-out;
+}
+.backgroundTransparent {
+    background-color: transparent !important;
+}

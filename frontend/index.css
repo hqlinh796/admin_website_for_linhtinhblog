@@ -1,5 +1,6 @@
 /* -------- RIGHT BAR ---------*/
 
+
 .leftbar-wrapper{
     width: 280px;
     float: left;
@@ -58,19 +59,8 @@ a.leftbar-link:hover,
 
 
 
-/* ---------- NAV ---------- */
-nav {
-    padding-left: 280px !important;
-}
-.account {
-    position: relative;
-}
 
-/* ---------- MAIN WRAPPER ---------- */
 
-.main-wrapper, .tox-dialog {
-    padding-left: 280px !important;
-}
 
 
 /* ---------- WRITE NEW POST ---------- */
@@ -141,7 +131,7 @@ nav {
 
 
     /* POST DETAIL PREVIEW MODAL */
-.left-slide-bar-blog-detail-wrapper{
+/* .left-slide-bar-blog-detail-wrapper{
         background-color: #fff;
     }
 
@@ -188,6 +178,7 @@ nav {
     }
 
     /* RELATED POSG */
+    /*
     .related-post-wrapper{
         background-color: #fff;
         padding: 30px;
@@ -230,6 +221,7 @@ nav {
     }
 
     /* RATE */
+    /*
     .rate-wrapper {
         background-color: #fff;
         line-height: 20px;
@@ -250,17 +242,12 @@ nav {
     }
     .your-rate-wrapper i {
         cursor: pointer;
-    }
+    } */
 
 
 /*  MANAGE POST */
 
-.nav-link.active {
-    background-color: inherit !important;
-    color: rgb(48, 48, 48) !important;
-    border-radius: 0;
-    border-bottom: 1px solid #6b6b6b;
-}
+
 
 
 /* UTIL */

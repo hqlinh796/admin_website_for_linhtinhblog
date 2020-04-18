@@ -180,214 +180,7 @@
 
                 </div>
         </section>
-        <section class="main-wrapper new-post bg-light py-3">
-            <h2 class="page-title pl-3 ">
-                Add new
-            </h2>
-            <section class="content px-3 row">
-                <div class="col-12">
-                    <form method="post" action="" id="form-add-new-post">
-                        <div class="row">
-                            <div class="form-group col-lg-6">
-                                <label class="fc-2 font-weight-bold" for="f-title">Title</label>
-                                <input id="f-title" type="text" class="form-control" name="title" required>
-                            </div>
-                            <div class="form-group col-lg-4 offset-lg-2">
-                                <label class="fc-2 font-weight-bold" for="f-category">Category</label>
-                                <select id="f-category" class="form-control" name="category" required>
-                                    <option>Đời sống</option>
-                                    <option>Giải trí</option>
-                                    <option>Thể thao</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group col-lg-6">
-                                <label class="fc-2 font-weight-bold" for="f-author">Author / Cre</label>
-                                <input id="f-author" type="text" class="form-control" name="author" required
-                                    value="Linh Hà">
-                            </div>
-                            <div class="form-group col-lg-6">
-                                <label class="fc-2 font-weight-bold" for="f-tags">
-                                    Tags
-                                    <span class="font-weight-normal"> (Use space character ' ' to seperate among
-                                        tags)</span>
-                                </label>
-                                <input id="f-tags" type="text" class="form-control" name="tags" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="fc-2 font-weight-bold" for="f-description">Description</label>
-                            <textarea id="f-description" type="text" class="form-control" name="description" required
-                                rows="4" maxlength="250"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="fc-2 font-weight-bold" for="f-cover">Cover</label>
-                            <div class="form-check">
-                                <label for="cover-url-radio" class="form-check-label d-block">
-                                    <input id="cover-url-radio" class="form-check-input" type="radio" name="f-cover">
-                                    URL
-                                </label>
-                                <input type="url" name="cover" id="cover-url-text" class="collapse">
-                            </div>
-                            <div class="form-check">
-                                <label for="cover-file-radio" class="form-check-label">
-                                    <input id="cover-file-radio" class="form-check-input" type="radio" name="f-cover"
-                                        value="true">
-                                    Upload file
-                                </label>
-                                <input id="cover-file-choose" class="form-control-file collapse" type="file"
-                                    name="cover">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="fc-2 font-weight-bold" for="f-content">Content</label>
-                            <input id="f-content" class="form-control" name="f-content" style="height: 700px;">
-
-                            </input>
-                        </div>
-
-                        <button id="btn1" class="btn btn-primary my-4" type="button">Save</button>
-                        <button id="btn1" class="btn btn-primary my-4" type="button">Publish</button>
-                        <button id="thumbnail-preview-button" class="btn btn-primary my-4" type="button">Thumbnail
-                            Preivew</button>
-                        <button id="post-detail-preview-button" class="btn btn-primary my-4" type="button">Post
-                            Preivew</button>
-
-                    </form>
-                </div>
-                <!-- THUMBNAIL PREVIEW MODAL -->
-                <div id="thumbnail-preview-modal" class="modal fade" tabindex="-1" role="dialog"
-                    aria-labelledby="my-modal-title" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="my-modal-title">
-                                    <span class="fc-2 font-weight-bold">
-                                        Post thumbnail
-                                    </span>
-                                </h5>
-                                <button class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="post-thumbnail">
-                                    <div class="post-thumbnail-content pt-2">
-                                        <div class="post-overview">
-                                            <img src="cover.jpg" alt="thumbnail-blog-detail"
-                                                class="post-img-thumbnail" />
-                                            <div class="post-text-detail">
-                                                <div class="date-post-thumbnail">
-                                                    <div class="text-center">
-                                                        <p class="fs-23 font-weight-bold date">13</p>
-                                                        <p class="fs-20 mb-0 month">Feb</p>
-                                                    </div>
-                                                </div>
-                                                <a href="#" class="title-post-thumbnail">This is the title of post</a>
-                                                <p class="description-post-thumbnail fs-19 m-tb-20 lh-15 fc-2">
-                                                    
-                                                </p>
-                                                <div class="category-post-thumbnail fc-2 m-b-10">
-                                                    <i class="fas fa-book-open"></i>
-                                                    &nbsp;
-                                                    <span>Cuộc sống</span>
-                                                    &nbsp;
-                                                </div>
-                                                <div class="tags-post-thumbnail">
-                                                    <span>Tags: </span>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- POST DETAIL PREVIEW MODAL -->
-                <div id="post-detail-preview-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <div class="left-slide-bar-blog-detail-wrapper">
-                                    <div class="post-detail">
-                                        <img src="cover.jpg" alt="" class="post-cover-image" />
-                                        <div class="">
-                                            <h1 class="font-weight-bold fs-25 post-detail-title">THIS IS TITLE
-                                            </h1>
-                                            <div class="date-and-category">
-                                                <span class="post-detail-date">22/12/2019</span>
-                                                <span>&nbsp; | &nbsp;</span>
-                                                <span class="post-detail-category">Cuoc song</span>
-                                            </div>
-                                            <div class="post-detail-author fs-14">
-                                                <i class="fas fa-book-reader"></i>
-                                                <span class="">Linh Ha</span>
-                                            </div>
-                                            <div class="post-detail-content">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-                                                pariatur ut iure
-                                                molestias sed id accusantium! Maxime libero, l
-                                                abore saepe placeat cupiditate architecto sapiente dolores, tempore
-                                                temporibus rem nihil delectus.
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="rate-wrapper">
-                                        <div class="your-rate-wrapper">
-                                            <span>Your rate: </span>
-                                            <i class="fas fa-star" id="level1"> </i>
-
-                                            <i class="fas fa-star" id="level2"> </i>
-
-                                            <i class="fas fa-star rated" id="level3"> </i>
-
-                                            <i class="fas fa-star" id="level4"> </i>
-
-                                            <i class="fas fa-star" id="level5"> </i>
-                                        </div>
-                                        <div class="rate">
-                                            <span>Rate: 4.7 </span>
-                                            <span>(3 votes)</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="related-post-wrapper">
-                                        <div>
-                                            <h3>Related posts</h3>
-                                            <div class="row">
-                                                <div class="col-md-4 related-post-item">
-                                                    <img alt="this is a related post" class="related-thumbnail"
-                                                        src="cover.jpg"></img>
-                                                    <a href="#">This is the first related post</a>
-                                                </div>
-                                                <div class="col-md-4 related-post-item">
-                                                    <img alt="this is a related post" class="related-thumbnail"
-                                                        src="cover.jpg"></img>
-                                                    <a href="#">This is the second related post</a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-            </section>
-        </section>
+        
         <footer>
             Footer
         </footer>
@@ -414,10 +207,13 @@
             toolbar_mode: 'floating',
             tinycomments_mode: 'embedded',
             tinycomments_author: 'Author name',
+            relative_urls: false,
+            remove_script_host: false,
+            convert_urls: true,
             //enable title field in the Image dialog
             image_title: true,
             // enable automatic uploads of images represented by blob or data URIs
-            automatic_uploads: true,
+            automatic_uploads: false,
             // add custom filepicker only to Image dialog
             file_picker_types: 'image',
             file_picker_callback: function (cb, value, meta) {
@@ -443,10 +239,22 @@
                 };
 
                 input.click();
-            }
+            },
+            images_upload_url: 'http://localhost:5500/post/upload-image'
+            //images_upload_base_path: '/some/basepath'
         });
     </script>
 
+    <!-- SAVE CONTENT -->
+    <script>
+        const btnSave = document.getElementById('save-button');
+        btnSave.addEventListener('click', (e) => {
+            e.preventDefault();
+            tinymce.activeEditor.uploadImages(function(success) {
+                
+            })
+        })
+    </script>
 
     <!-- POST THUMBNAIL -->
     <script>
